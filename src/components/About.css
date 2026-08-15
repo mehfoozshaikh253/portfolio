@@ -1,0 +1,247 @@
+.about-section {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Heading */
+
+.section-heading {
+  max-width: 650px;
+  margin: auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 50px;
+  background: rgba(13, 110, 253, 0.08);
+  color: #0d6efd;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+}
+
+.section-heading h2 span {
+  color: #0d6efd;
+}
+
+.section-heading p {
+  font-size: 1rem;
+}
+
+/* Image */
+
+.about-image-wrapper {
+  position: relative;
+  width: 340px;
+  max-width: 100%;
+  margin: auto;
+  padding: 15px;
+}
+
+.about-image-card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #f8f9fa;
+  padding: 8px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Experience Badge */
+
+.experience-badge {
+  position: absolute;
+  right: -25px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 17px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.experience-badge i {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+  font-size: 1.3rem;
+}
+
+.experience-badge strong,
+.experience-badge small {
+  display: block;
+}
+
+.experience-badge strong {
+  font-size: 0.9rem;
+}
+
+.experience-badge small {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+/* Decorative */
+
+.about-decoration {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(13, 110, 253, 0.15);
+}
+
+.about-decoration-one {
+  width: 80px;
+  height: 80px;
+  top: -10px;
+  left: -20px;
+}
+
+.about-decoration-two {
+  width: 120px;
+  height: 120px;
+  right: -30px;
+  top: 50px;
+}
+
+/* Content */
+
+.about-small-title {
+  color: #0d6efd;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+}
+
+.about-text {
+  color: #6c757d;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.about-text strong {
+  color: #343a40;
+}
+
+/* Info Cards */
+
+.about-info-card {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.about-info-card:hover {
+  background: white;
+  border-color: rgba(13, 110, 253, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.about-info-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(13, 110, 253, 0.08);
+  color: #0d6efd;
+  font-size: 1.1rem;
+}
+
+.about-info-card small,
+.about-info-card strong {
+  display: block;
+}
+
+.about-info-card small {
+  color: #6c757d;
+  font-size: 0.72rem;
+  margin-bottom: 2px;
+}
+
+.about-info-card strong {
+  color: #212529;
+  font-size: 0.88rem;
+}
+
+/* Resume */
+
+.about-resume-btn {
+  padding: 11px 20px;
+  background: #212529;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.about-resume-btn:hover {
+  background: #0d6efd;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
+}
+
+/* Mobile */
+
+@media (max-width: 991.98px) {
+  .about-image-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-info-card {
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    height: 350px;
+  }
+
+  .experience-badge {
+    right: -5px;
+  }
+}
