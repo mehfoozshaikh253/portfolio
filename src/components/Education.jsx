@@ -23,7 +23,7 @@ const education = [
 
 function Education() {
   return (
-    <section id="education" className="education-section py-5">
+    <section id="education" className="education-section py-1">
 
       <div className="container py-lg-5">
 

@@ -34,7 +34,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <section id="experience" className="experience-section py-5">
+    <section id="experience" className="experience-section py-1">
 
       <div className="container py-lg-5">
 

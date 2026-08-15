@@ -3,7 +3,7 @@ function Hero() {
   return (
     <section id="home" className="hero-section">
       <div className="container">
-        <div className="row align-items-center min-vh-100 py-5">
+        <div className="row align-items-center min-vh-100 py-1">
 
           {/* Left Content */}
           <div className="col-lg-7 text-center text-lg-start">

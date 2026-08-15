@@ -1,7 +1,7 @@
 import "./About.css";
 function About() {
   return (
-    <section id="about" className="about-section py-5">
+    <section id="about" className="about-section py-1">
       <div className="container py-lg-5">
 
         {/* Section Heading */}

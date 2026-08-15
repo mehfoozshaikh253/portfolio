@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Collapse } from "bootstrap";
 
 function Navbar() {
   const [active, setActive] = useState("home");
@@ -20,7 +19,7 @@ function Navbar() {
 
       const targetPosition =
         target.getBoundingClientRect().top +
-        window.pageYOffset -
+        window.scrollY -
         navbarHeight;
 
       window.scrollTo({
@@ -29,22 +28,24 @@ function Navbar() {
       });
     };
 
-    // Mobile menu open hai
+    // Check if mobile menu is open
     if (navbar && navbar.classList.contains("show")) {
-      const bsCollapse = Collapse.getInstance(navbar);
+      // Remove Bootstrap's open class
+      navbar.classList.remove("show");
 
-      if (bsCollapse) {
-        bsCollapse.hide();
+      // Update hamburger button state
+      const toggler = document.querySelector(".navbar-toggler");
 
-        // Navbar close hone ke baad scroll
-        setTimeout(() => {
-          scrollToSection();
-        }, 350);
-      } else {
-        scrollToSection();
+      if (toggler) {
+        toggler.classList.add("collapsed");
+        toggler.setAttribute("aria-expanded", "false");
       }
+
+      // Wait for menu to close, then scroll
+      setTimeout(() => {
+        scrollToSection();
+      }, 350);
     } else {
-      // Desktop
       scrollToSection();
     }
   };
@@ -79,6 +80,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
 
+            {/* Home */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${
@@ -92,6 +94,7 @@ function Navbar() {
               </a>
             </li>
 
+            {/* About */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${
@@ -105,6 +108,7 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Skills */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${
@@ -118,6 +122,7 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Projects */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${
@@ -131,6 +136,7 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Experience */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${
@@ -144,6 +150,7 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Education */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${
@@ -157,6 +164,7 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Contact */}
             <li className="nav-item">
               <a
                 className={`nav-link px-3 ${

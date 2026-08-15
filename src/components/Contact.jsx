@@ -50,7 +50,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section py-5">
+    <section id="contact" className="contact-section py-1">
       <div className="container py-lg-5">
         {/* Heading */}
         <div className="section-heading text-center mb-5">
