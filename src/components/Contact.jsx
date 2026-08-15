@@ -29,8 +29,8 @@ function Contact() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/contact",
-        formData
+        "https://portfolio-backend-8zbp.onrender.com/api/contact",
+        formData,
       );
 
       setStatus(response.data.message);
@@ -52,7 +52,6 @@ function Contact() {
   return (
     <section id="contact" className="contact-section py-5">
       <div className="container py-lg-5">
-
         {/* Heading */}
         <div className="section-heading text-center mb-5">
           <span className="section-label">
@@ -65,29 +64,24 @@ function Contact() {
           </h2>
 
           <p className="text-muted">
-            Have a project, opportunity or just want to say hello?
-            I'd love to hear from you.
+            Have a project, opportunity or just want to say hello? I'd love to
+            hear from you.
           </p>
         </div>
 
         <div className="row g-5 align-items-stretch">
-
           {/* Contact Information */}
           <div className="col-lg-5">
-
             <div className="contact-info">
-
-              <span className="contact-small-title">
-                GET IN TOUCH
-              </span>
+              <span className="contact-small-title">GET IN TOUCH</span>
 
               <h3 className="fw-bold mt-2 mb-3">
                 Let's talk about your next project.
               </h3>
 
               <p className="text-muted mb-4">
-                I'm always interested in discussing new projects,
-                development opportunities and interesting ideas.
+                I'm always interested in discussing new projects, development
+                opportunities and interesting ideas.
               </p>
 
               {/* Email */}
@@ -106,10 +100,7 @@ function Contact() {
               </a>
 
               {/* Phone */}
-              <a
-                href="tel:+918097409934"
-                className="contact-info-item"
-              >
+              <a href="tel:+918097409934" className="contact-info-item">
                 <div className="contact-icon">
                   <i className="bi bi-telephone"></i>
                 </div>
@@ -134,7 +125,6 @@ function Contact() {
 
               {/* Social */}
               <div className="contact-social mt-4">
-
                 <a
                   href="https://github.com/mehfoozshaikh253"
                   target="_blank"
@@ -152,23 +142,16 @@ function Contact() {
                 >
                   <i className="bi bi-linkedin"></i>
                 </a>
-
               </div>
-
             </div>
-
           </div>
 
           {/* Contact Form */}
           <div className="col-lg-7">
-
             <div className="contact-card">
-
               <div className="contact-card-header">
                 <div>
-                  <h4 className="fw-bold mb-1">
-                    Send Me a Message
-                  </h4>
+                  <h4 className="fw-bold mb-1">Send Me a Message</h4>
 
                   <p className="text-muted mb-0">
                     Fill out the form and I'll get back to you.
@@ -181,12 +164,9 @@ function Contact() {
               </div>
 
               <form onSubmit={handleSubmit}>
-
                 {/* Name */}
                 <div className="mb-3">
-                  <label className="form-label">
-                    Name
-                  </label>
+                  <label className="form-label">Name</label>
 
                   <div className="input-group">
                     <span className="input-group-text">
@@ -207,9 +187,7 @@ function Contact() {
 
                 {/* Email */}
                 <div className="mb-3">
-                  <label className="form-label">
-                    Email
-                  </label>
+                  <label className="form-label">Email</label>
 
                   <div className="input-group">
                     <span className="input-group-text">
@@ -230,9 +208,7 @@ function Contact() {
 
                 {/* Message */}
                 <div className="mb-4">
-                  <label className="form-label">
-                    Message
-                  </label>
+                  <label className="form-label">Message</label>
 
                   <div className="input-group">
                     <span className="input-group-text align-items-start pt-3">
@@ -263,7 +239,6 @@ function Contact() {
                         className="spinner-border spinner-border-sm me-2"
                         role="status"
                       ></span>
-
                       Sending...
                     </>
                   ) : (
@@ -273,7 +248,6 @@ function Contact() {
                     </>
                   )}
                 </button>
-
               </form>
 
               {/* Status */}
@@ -286,20 +260,15 @@ function Contact() {
                 >
                   <i
                     className={`bi ${
-                      error
-                        ? "bi-exclamation-circle"
-                        : "bi-check-circle"
+                      error ? "bi-exclamation-circle" : "bi-check-circle"
                     } me-2`}
                   ></i>
 
                   {status}
                 </div>
               )}
-
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
