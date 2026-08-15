@@ -1,10 +1,22 @@
 import { useState } from "react";
+import { Collapse } from "bootstrap";
 
 function Navbar() {
   const [active, setActive] = useState("home");
 
   const handleClick = (section) => {
     setActive(section);
+
+    // Close mobile navbar after clicking a menu item
+    const navbar = document.getElementById("navbarNav");
+
+    if (navbar && navbar.classList.contains("show")) {
+      const bsCollapse = Collapse.getInstance(navbar);
+
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    }
   };
 
   return (
@@ -37,9 +49,12 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
 
+            {/* Home */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "home" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "home" ? "active" : ""
+                }`}
                 href="#home"
                 onClick={() => handleClick("home")}
               >
@@ -48,9 +63,12 @@ function Navbar() {
               </a>
             </li>
 
+            {/* About */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "about" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "about" ? "active" : ""
+                }`}
                 href="#about"
                 onClick={() => handleClick("about")}
               >
@@ -59,9 +77,12 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Skills */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "skills" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "skills" ? "active" : ""
+                }`}
                 href="#skills"
                 onClick={() => handleClick("skills")}
               >
@@ -70,9 +91,12 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Projects */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "projects" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "projects" ? "active" : ""
+                }`}
                 href="#projects"
                 onClick={() => handleClick("projects")}
               >
@@ -81,9 +105,12 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Experience */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "experience" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "experience" ? "active" : ""
+                }`}
                 href="#experience"
                 onClick={() => handleClick("experience")}
               >
@@ -92,9 +119,12 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Education */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "education" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "education" ? "active" : ""
+                }`}
                 href="#education"
                 onClick={() => handleClick("education")}
               >
@@ -103,9 +133,12 @@ function Navbar() {
               </a>
             </li>
 
+            {/* Contact */}
             <li className="nav-item">
               <a
-                className={`nav-link px-3 ${active === "contact" ? "active" : ""}`}
+                className={`nav-link px-3 ${
+                  active === "contact" ? "active" : ""
+                }`}
                 href="#contact"
                 onClick={() => handleClick("contact")}
               >
