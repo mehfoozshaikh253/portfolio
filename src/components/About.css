@@ -10,6 +10,13 @@
   max-width: 650px;
   margin: auto;
 }
+.about-resume-btn {
+  color: #000 !important;
+}
+
+.about-resume-btn:hover {
+  color: #000 !important;
+}
 
 .section-label {
   display: inline-flex;

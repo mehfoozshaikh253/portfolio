@@ -152,7 +152,7 @@ function About() {
               {/* Resume */}
               <div className="mt-4">
                 <a
-                  href="/resume.pdf"
+                  href="/Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="btn about-resume-btn"
